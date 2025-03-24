@@ -15,7 +15,7 @@ except Exception as e:
     logger.error(f"Error loading environment variables: {e}")
 
 # For Vercel serverless deployment
-app = app
+app = app  # This line exposes the app to Vercel
 
 if __name__ == "__main__":
     host = os.getenv("HOST", "0.0.0.0")
